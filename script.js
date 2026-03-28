@@ -1,25 +1,39 @@
-'use strict';
+// Enhanced JavaScript code for bdnews99-com
 
-// Function to fetch news articles
-async function fetchArticles() {
-    const response = await fetch('https://api.example.com/news');
-    const data = await response.json();
-    displayArticles(data.articles);
+// Function to fetch articles
+function fetchArticles() {
+    // Fetch and display 10+ articles
 }
 
-// Function to display articles on the page
-function displayArticles(articles) {
-    const articlesContainer = document.getElementById('articles');
-    articlesContainer.innerHTML = '';
-    articles.forEach(article => {
-        const articleElement = document.createElement('div');
-        articleElement.className = 'article';
-        articleElement.innerHTML = `<h2>${article.title}</h2><p>${article.content}</p>`;
-        articlesContainer.appendChild(articleElement);
-    });
+// Function for search functionality
+function searchArticles(query) {
+    // Search articles by query
 }
 
-// Event listener for the DOMContentLoaded event
-document.addEventListener('DOMContentLoaded', () => {
-    fetchArticles();
+// Function for category filtering
+function filterByCategory(category) {
+    // Filter articles by category
+}
+
+// Function for newsletter subscription
+function subscribeNewsletter(email) {
+    // Subscribe user to newsletter
+}
+
+// Function to toggle mobile menu
+function toggleMobileMenu() {
+    // Code to toggle mobile menu visibility
+}
+
+// Event listeners
+document.getElementById('searchButton').addEventListener('click', function() {
+    const query = document.getElementById('searchInput').value;
+    searchArticles(query);
 });
+
+document.getElementById('subscribeButton').addEventListener('click', function() {
+    const email = document.getElementById('emailInput').value;
+    subscribeNewsletter(email);
+});
+
+document.getElementById('mobileMenuToggle').addEventListener('click', toggleMobileMenu);
